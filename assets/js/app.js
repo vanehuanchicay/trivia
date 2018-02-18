@@ -46,10 +46,11 @@ fetch('https://opentdb.com/api.php?amount=10&category=11&difficulty=medium')
           $('.enter_button').text('Next Question'); // cambio contenido del boton
           $('.enter_button').show(); // vuelvo a mostrar mi boton
           $('.info').append(`<h4>Correct answer!</h4>`);
-          
+
+            counter ++ 
          
-          counter ++ 
         }
+      
 
       });
 

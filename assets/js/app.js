@@ -31,11 +31,7 @@
     var credential = error.credential;
     // ...
   });
-    $('.title').removeClass('hidden');
-    $('.select_title').removeClass('hidden');
-    $('.multiple_option').removeClass('hidden');
-    $('.other_option').removeClass('hidden');
-    $('#google-sign').hide();
+
 }
 
 

@@ -9,7 +9,7 @@
   };
   var provider = new firebase.auth.GoogleAuthProvider();
 
-  function singIn(){
+  function signIn(){
     firebase.initializeApp(config);
     var provider = new firebase.auth.GoogleAuthProvider();
 

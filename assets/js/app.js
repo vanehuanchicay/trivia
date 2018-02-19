@@ -10,7 +10,11 @@
   var provider = new firebase.auth.GoogleAuthProvider();
 
   function signIn(){
-
+    $('.title').removeClass('hidden');
+    $('.select_title').removeClass('hidden');
+    $('.multiple_option').removeClass('hidden');
+    $('.other_option').removeClass('hidden');
+    $('#google-sign').hide();
   firebase.auth().signInWithRedirect(provider);
 
   firebase.auth().getRedirectResult().then(function(result) {
@@ -45,11 +49,6 @@ fetch('https://opentdb.com/api.php?amount=15&category=11&difficulty=medium')
     console.log(data)
     let correctAnswers = 0;
     let counter = 0; 
-    $('.title').removeClass('hidden');
-    $('.select_title').removeClass('hidden');
-    $('.multiple_option').removeClass('hidden');
-    $('.other_option').removeClass('hidden');
-    $('#google-sign').hide();
   
     $('.multiple_option').on('click', function(){
       $('.select_title').hide();

@@ -29,6 +29,7 @@
     var credential = error.credential;
     // ...
   });
+}
 /*
   firebase.auth().signInWithRedirect(provider);
 

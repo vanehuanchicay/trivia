@@ -29,7 +29,7 @@
     var credential = error.credential;
     // ...
   });
-
+/*
   firebase.auth().signInWithRedirect(provider);
 
   firebase.auth().getRedirectResult().then(function(result) {
@@ -52,7 +52,7 @@
   });
   
 }
-
+*/
 
 fetch('https://opentdb.com/api.php?amount=15&category=11&difficulty=medium')
 .then((response)=>{

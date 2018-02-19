@@ -7,9 +7,51 @@
     storageBucket: "trivia-8494a.appspot.com",
     messagingSenderId: "343758776919"
   };
-  firebase.initializeApp(config);
+  var provider = new firebase.auth.GoogleAuthProvider();
 
+  function singIn(){
+    firebase.initializeApp(config);
+    var provider = new firebase.auth.GoogleAuthProvider();
 
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+
+  firebase.auth().signInWithRedirect(provider);
+
+  firebase.auth().getRedirectResult().then(function(result) {
+    if (result.credential) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // ...
+  }
+  // The signed-in user info.
+  var user = result.user;
+  }).catch(function(error){
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+  
+}
 
 
 fetch('https://opentdb.com/api.php?amount=15&category=11&difficulty=medium')
@@ -69,7 +111,7 @@ fetch('https://opentdb.com/api.php?amount=15&category=11&difficulty=medium')
           $('.info').empty();
           $('.multiple_option').hide();
           $('.info').append(`<button class="go_back">BACK TO HOME</button>
-          <h4>Your results</h4><h5>You got ${correctAnswers} out of 5</h5>`)
+          <h4>Your results</h4><h5>You got ${correctAnswers} out of 15</h5>`)
          
         } 
          $('.go_back').on('click', function() {

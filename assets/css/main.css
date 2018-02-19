@@ -36,7 +36,16 @@
 	margin-top:1%;
 	width: 58%;
 }
-
+#google-sign{
+	background-color:#44d4ca;
+	color: white;
+	border-radius: 10px;
+	border:none;
+	padding: 2%;
+	margin-bottom: 3%;
+	width: 38%;
+	text-align: center;
+}
 
 
 #313a4a

@@ -50,6 +50,7 @@ fetch('https://opentdb.com/api.php?amount=15&category=11&difficulty=medium')
     let counter = 0; 
   
     $('#multiple_option').on('click', function(){
+      $('.user_name').hide();
       $('#select_title').hide();
       $('#other_option').hide(); // ocutar true/false selección
       $('#multiple_option').hide(); // ocultar multiple selección

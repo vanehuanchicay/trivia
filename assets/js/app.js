@@ -1,3 +1,17 @@
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCkeqW1Dx8h8Ov98dey7e0sa93-p_4P8_E",
+    authDomain: "trivia-8494a.firebaseapp.com",
+    databaseURL: "https://trivia-8494a.firebaseio.com",
+    projectId: "trivia-8494a",
+    storageBucket: "trivia-8494a.appspot.com",
+    messagingSenderId: "343758776919"
+  };
+  firebase.initializeApp(config);
+
+
+
+
 fetch('https://opentdb.com/api.php?amount=15&category=11&difficulty=medium')
 .then((response)=>{
     console.log(response);
@@ -38,7 +52,7 @@ fetch('https://opentdb.com/api.php?amount=15&category=11&difficulty=medium')
           $('.info').empty(); // vaciar div contenedor info
           $('.multiple_option').show(); // vuelvo a mostrar mi boton
           $('.multiple_option').text('Next Question'); // cambio contenido del boton
-          $('.info').append(`<h4>Correct answer!</h4>`);
+          $('.info').append(`<h4>CORRECT ANSWER!</h4>`);
 
           correctAnswers ++; console.log(correctAnswers) //contador de respuestas correctas
         }
@@ -46,7 +60,7 @@ fetch('https://opentdb.com/api.php?amount=15&category=11&difficulty=medium')
           $('.info').empty();
           $('.multiple_option').show();
           $('.multiple_option').text('Next Question');
-          $('.info').append(`<h4>Aww wrong answer!</h4><h5>The Correct Answer is
+          $('.info').append(`<h4>WRONG ANSWER!</h4><h5>The Correct Answer is
           ${data.results[counter].correct_answer}</h5>`);
           
         }counter ++; // contador general
@@ -108,7 +122,7 @@ fetch('https://opentdb.com/api.php?amount=15&difficulty=hard&type=boolean')
           $('.info').empty(); // vaciar div contenedor info
           $('.other_option').show(); // vuelvo a mostrar mi boton
           $('.other_option').text('Next Question'); // cambio contenido del boton
-          $('.info').append(`<h4>Correct answer!</h4>`);
+          $('.info').append(`<h4>CORRECT ANSWER!</h4>`);
 
           correctAnswers ++; console.log(correctAnswers) //contador de respuestas correctas
         }
@@ -116,7 +130,7 @@ fetch('https://opentdb.com/api.php?amount=15&difficulty=hard&type=boolean')
           $('.info').empty();
           $('.other_option').show();
           $('.other_option').text('Next Question');
-          $('.info').append(`<h4>Aww wrong answer!</h4><h5>The Correct Answer is
+          $('.info').append(`<h4>WRONG ANSWER!</h4><h5>The Correct Answer is
           ${data.results[counter].correct_answer}</h5>`);
           
         }counter ++; // contador general

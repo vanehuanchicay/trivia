@@ -1,3 +1,43 @@
-.options{
-	background-color: #E4E4E4;
+.selection{
+	background-image: url(../img/2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 52vh;
+	background-position: 0 -61px;
 }
+.title{
+ font-family:  Fredericka the Great;
+ color: #44d4ca;	
+ background-color: white;
+ background-color: rgba(255,255,255,1.0);
+ margin-top: 3%;
+}
+.select_title{
+	color: #313a4a;
+	margin-top: 10%;
+	margin-bottom: 4%;
+}
+.multiple_option, .other_option{
+	background-color: #44d4ca;
+	color: white;
+	border-radius: 15px;
+	border:none;
+}
+.info{
+	color:#313a4a;
+}
+.options{
+	background-color:#44d4ca;
+	color: white;
+	border-radius: 8px;
+	border:none;
+	padding: 2%;
+	margin-bottom: 3%;
+	margin-top:1%;
+	width: 58%;
+}
+
+
+
+#313a4a
+#44d4ca

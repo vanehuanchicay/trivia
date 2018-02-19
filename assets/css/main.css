@@ -17,11 +17,12 @@
 	margin-top: 10%;
 	margin-bottom: 4%;
 }
-.multiple_option, .other_option{
+#multiple_option, #other_option{
 	background-color: #44d4ca;
 	color: white;
 	border-radius: 15px;
 	border:none;
+	margin-bottom:47%;
 }
 .info{
 	color:#313a4a;
@@ -48,5 +49,5 @@
 }
 
 
-#313a4a
-#44d4ca
+#313a4a;
+#44d4ca;

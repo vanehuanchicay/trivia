@@ -1,5 +1,6 @@
 # OH MY TRIVIA!
-Juego de trivia creado con la API de Open Trivia DB.
+
+Evalúa tus conocimientos sobre el cine a través de una aplicación para hacer trivias de preguntas y respuestas, pruébalo en opción múltiple y con verdadero y falso. 
 
 ![p1](https://user-images.githubusercontent.com/32286241/37927319-1d37bd7c-3110-11e8-983b-a4763bbfc14c.png)
 
